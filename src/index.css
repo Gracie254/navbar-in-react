@@ -1,13 +1,84 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.nav-bar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 15vh;
+  background-color: rgba(11, 8, 197, 0.418);
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  font-size: 1.4em;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.section > p {
+  padding: 10px;
+}
+
+.nav-end {
+  display: flex;
+  font-size: 2em;
+  justify-content: flex-end;
+}
+
+.nav-end > p {
+  padding: 10px;
+  color: rgba(2, 1, 66, 0.952);
+}
+@media screen and (min-width: 801px) {
+  .toggleBtns {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav-bar {
+    height: 90vh;
+    position: absolute;
+    background-color: rgba(241, 240, 252, 0.952);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+  }
+  .nav-bar > h1 {
+    color: rgba(53, 53, 54, 0.87);
+  }
+  .section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section > p {
+    padding: 2px;
+    color: rgba(2, 1, 66, 0.952);
+    font-size: 2.1rem;
+  }
+
+  .section > p:hover {
+    color: rgb(4, 0, 230);
+  }
+
+  .nav-end {
+    display: none;
+  }
+  #times,
+  #bars {
+    color: rgb(7, 6, 53);
+    font-size: 2.1rem;
+  }
 }
